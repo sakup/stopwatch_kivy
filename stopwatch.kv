@@ -1,0 +1,35 @@
+<Root>:
+    id: layout
+    orientation: 'vertical'
+
+    Label:
+        text: str(root.time)
+        font_size: '75sp'
+        size_hint: 1, .5
+        # width: self.height
+        # text_size: None, None
+        # size: self.texture_size
+
+    BoxLayout:
+        padding: 10
+        spacing: 5
+        size_hint: 1, .3
+
+        Button:
+            text: 'Reset'
+            font_size: '20sp'
+            on_press: root.reset_time()
+
+        Button:
+            text: 'Stop'
+            font_size: '20sp'
+            on_press: root.stop_time()
+
+        Button:
+            text: 'Start'
+            font_size: '20sp'
+            on_press: root.start_time()
+
+    ListView:
+        # id: students_list_view
+        # adapter: ListAdapter(data=["Vasya Pupkin"], cls=main.StudentListButton)
